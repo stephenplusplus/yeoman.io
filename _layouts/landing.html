@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+{% include landing/head.html %}
+<body>
+  <div id="content" class="container">
+    {% if page.markdown == 1 %}
+      {{ content | markdownify }}
+    {% else %}
+      {{ content }}
+    {% endif %}
+  </div>
+<!--
+  {% include forkit.html %}
+-->
+  {% include foot.html %}
+</body>
+</html>
